@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Graph Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="phone-screen">
+        <header class="top-bar">
+            <h1> B.A Mathematics & <br>Computer Science </h1>
+
+            <div class="nav-buttons">
+                <button class="nav-btn">
+                    Search 
+                </button>
+                <button class="nav-btn">
+                    Profile
+                </button>
+            </div>
+        </header>
+       
+        <div class="graph-container">
+            
+            <svg class="connections" width="100%" height="100%">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+                    </marker>
+                    <marker id="arrowhead-dashed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+                    </marker>
+                </defs>
+
+                <path d="M 90 90 Q 130 70 155 85" stroke="black" fill="none" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                <path d="M 230 85 Q 260 70 290 90" stroke="black" fill="none" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                <path d="M 230 190 Q 280 180 310 125" stroke="black" fill="none" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+                <path d="M 70 340 L 135 310" stroke="black" fill="none" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowhead-dashed)"/>
+                <path d="M 160 355 L 180 410" stroke="black" fill="none" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowhead-dashed)"/>
+                <path d="M 215 300 Q 250 280 290 265" stroke="black" fill="none" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowhead-dashed)"/>
+                <path d="M 215 320 Q 260 340 305 380" stroke="black" fill="none" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowhead-dashed)"/>
+                
+                <path d="M 330 300 Q 350 330 345 365" stroke="black" fill="none" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                
+            </svg>
+
+            <div class="node green" style="top: 60px; left: 20px;">CIS<br>1100</div>
+            <div class="node green" style="top: 50px; left: 150px;">CIS<br>1200</div>
+            <div class="node red"   style="top: 60px; left: 280px;">CIS<br>1210</div>
+            <div class="node green" style="top: 160px; left: 150px;">CIS<br>1600</div>
+
+            <div class="node green" style="top: 310px; left: -10px;">MATH<br>1400</div>
+            <div class="node green dashed" style="top: 280px; left: 135px;">MATH<br>1410</div>
+            <div class="node green dashed" style="top: 230px; left: 280px;">MATH<br>2400</div>
+            <div class="node red dashed"   style="top: 410px; left: 135px;">MATH<br>1610</div>
+            <div class="node red dashed"   style="top: 370px; left: 290px;">MATH<br>2600</div>
+            <div class="node green" style="top: 510px; left: 240px;">MATH<br>2410</div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
